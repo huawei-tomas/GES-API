@@ -15,6 +15,7 @@ export GES_USER=<ges_user>
 export GES_PSSWD=<ges_psswd>
 export GES_DOMAIN=<ges_domain>
 export GES_PROJECTID=<ges_projectid>
+export GES_GRAPHID=<ges_graphid>
 ```
 and then you can just call `source .ges_environ` and all your variables are 
 set.
