@@ -23,11 +23,8 @@ headers["X-Auth-Token"] = token
 
 my_project_id = os.environ['GES_PROJECTID']
 my_graph_id = os.environ['GES_GRAPHID']
-my_region = os.environ['GES_REGION']
+my_region = os.environ['GES_REGION'].replace('iam','ges')
 
-# action = "start"
-# action = "stop"
-# action = "execute-gremlin-query"
 if args.action is None or args.action == "test":
     action = "execute-gremlin-query"
 elif args.action == "start" or args.action == "stop":
