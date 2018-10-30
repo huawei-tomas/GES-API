@@ -3,6 +3,7 @@ import json
 import certifi
 from pprint import pprint
 import argparse
+import os
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-a", "--action",
@@ -20,9 +21,9 @@ headers = {"Content-Type":"application/json"}
 headers["X-Language"] = "en-us"
 headers["X-Auth-Token"] = token
 
-my_project_id = "bb4478f419c34cd7889b0ab8639e81e6"
-my_graph_id = "98d86aeb-1f84-4178-ac50-d034c1adb8bc"
-my_region = "ges.cn-north-1"
+my_project_id = os.environ['GES_PROJECTID']
+my_graph_id = os.environ['GES_GRAPHID']
+my_region = os.environ['GES_REGION']
 
 # action = "start"
 # action = "stop"
