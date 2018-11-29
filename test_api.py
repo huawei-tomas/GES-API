@@ -38,9 +38,6 @@ url = "https://{}/v1.0/{}/graphs/{}/action?action_id={}".format(
     )
 
 data = {"command":"g.V().limit(10)"}
-
-fields = {"data":json.dumps(data)}
-
 r = http.request("POST", url, headers=headers, body=json.dumps(data))
 
 # We don't want a JSON string. We want a python dictionary.
